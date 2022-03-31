@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Entities\Notifications\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>

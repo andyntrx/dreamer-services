@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "Dreamers.Background.Services": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>dotnet-Dreamers.Background.Services-402DCCFD-A41A-4E53-8438-6EB8F0ACAF78</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.0.1-develop.410" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.23" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\dreamers.Domain\Dreamers.Domain.csproj" />
+  </ItemGroup>
+</Project>

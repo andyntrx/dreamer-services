@@ -1,4 +1,6 @@
-using Dreamers.Application.Members;
+
+using Dreamers.Application.Clients;
+using Dreamers.Application.Extensions;
 using Dreamers.Infra.Data.Context;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -33,7 +35,9 @@ namespace dreamers.hope.api
             services.AddControllers();
             services.AddSwaggerGen();
 
-            services.AddMediatR(Assembly.GetExecutingAssembly(), typeof(AddClientProfileCommand).Assembly); 
+
+            Application.Register(services);
+
             services.AddDbContext<DreamContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         }

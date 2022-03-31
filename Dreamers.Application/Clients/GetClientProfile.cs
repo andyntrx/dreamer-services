@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Client
+namespace Dreamers.Application.Clients
 {
     public class GetClientProfile : IRequest<ClientProfile>
     {

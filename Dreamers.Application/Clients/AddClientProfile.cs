@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Members
+namespace Dreamers.Application.Clients
 {
     public class AddClientProfileCommand : IRequest
     {

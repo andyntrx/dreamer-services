@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dreamers.Domain.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Net.Mail;
 using System.Text;

@@ -1,4 +1,5 @@
 ﻿using Dreamers.Application.Clients.Events;
+using Dreamers.Domain.Entities.Clients;
 using Dreamers.Infra.Data.Context;
 using MediatR;
 using System;
@@ -20,11 +21,12 @@ namespace Dreamers.Application.Clients
     {
        // readonly IClientProfileCreateEventPublisher _createdEventPublisher;
         readonly DreamContext _context;
-        public CreateClientProfile(DreamContext context)
-                                 //  IClientProfileCreateEventPublisher createdEventPublisher)
+        readonly IMediator _mediator;
+        public CreateClientProfile(DreamContext context, 
+                                   IMediator mediator)
         {
-           // _createdEventPublisher = createdEventPublisher;
             _context = context;
+            _mediator = mediator; 
         }
 
         public async Task<Unit> Handle(CreateClientProfileCommand request, CancellationToken cancellationToken)
@@ -32,7 +34,7 @@ namespace Dreamers.Application.Clients
             if (request == null)
                 return Unit.Value;
 
-            var cp = new Domain.Entities.Clients.ClientProfile
+            var cp = new ClientProfile
             {
 
             };
@@ -40,8 +42,8 @@ namespace Dreamers.Application.Clients
             _context.ClientProfiles.Add(cp);
             await _context.SaveChangesAsync();
 
-
-            //await _createdEventPublisher.Publish(new ClientProfileCreateEvent { });
+            // publish events to finish client profile
+            await _mediator.Publish(new ClientProfileCreatedEvent(cp.Ucid));
 
             return Unit.Value;
         }

@@ -11,8 +11,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace Dreamers.Aura.Api.Controllers.v1
 {
     [Route("api/v1.0/[controller]")]
@@ -24,7 +22,6 @@ namespace Dreamers.Aura.Api.Controllers.v1
 
         }
 
-        // GET: api/<ClientProfileController>
         [HttpGet]
         public async Task<PagedResponse<List<ClientProfile>>> Get([FromQuery] PaginationFilter filter)
         {
@@ -32,7 +29,6 @@ namespace Dreamers.Aura.Api.Controllers.v1
             return PaginationHelpers.CreatePagedReponse(result.Data.ToList(), result.Total, filter);
         }
 
-        // GET api/<ClientProfileController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {

@@ -10,7 +10,6 @@ namespace Dreamers.Domain.Entities.Encounters
     {
         public Client Client { get; set; }
         public EncounterType EncounterType { get; set; }
-
         public List<Document> Documents { get; set; }
     }
 }

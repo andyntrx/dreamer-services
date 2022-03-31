@@ -3,6 +3,7 @@ using Dreamers.Aura.Api.Filters;
 using Dreamers.Aura.Api.Helpers;
 using Dreamers.Aura.Api.Wrappers;
 using Dreamers.Domain.Entities;
+using Dreamers.Domain.Entities.Clients;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Documents\" />
+    <Folder Include="Dreamers\" />
     <Folder Include="Health\" />
   </ItemGroup>
 

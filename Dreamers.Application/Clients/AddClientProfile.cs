@@ -28,7 +28,7 @@ namespace Dreamers.Application.Clients
             if (request == null)
                 return Unit.Value;
 
-            var cp = new Domain.Entities.ClientProfile
+            var cp = new Domain.Entities.Clients.ClientProfile
             {
 
             };

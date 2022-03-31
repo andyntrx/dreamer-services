@@ -1,4 +1,5 @@
 ﻿using Dreamers.Domain.Entities;
+using Dreamers.Domain.Entities.Clients;
 using MediatR;
 using System;
 using System.Collections.Generic;

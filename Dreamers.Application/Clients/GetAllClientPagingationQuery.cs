@@ -1,5 +1,6 @@
 ﻿using Dreamers.Common.Wrappers;
 using Dreamers.Domain.Entities;
+using Dreamers.Domain.Entities.Clients;
 using Dreamers.Infra.Data.Context;
 using MediatR;
 using System;

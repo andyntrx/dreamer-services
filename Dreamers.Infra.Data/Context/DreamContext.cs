@@ -1,5 +1,6 @@
 ﻿
 using Dreamers.Domain.Entities;
+using Dreamers.Domain.Entities.Clients;
 using Microsoft.EntityFrameworkCore;
 
 namespace Dreamers.Infra.Data.Context
@@ -12,5 +13,6 @@ namespace Dreamers.Infra.Data.Context
         }
 
         public DbSet<ClientProfile> ClientProfiles { get; set; }
+        public DbSet<Client> Clients { get; set;}
     }
 }

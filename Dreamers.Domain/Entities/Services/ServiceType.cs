@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 
-namespace Dreamers.Domain.Entities.Encounters
+namespace Dreamers.Domain.Entities.Services
 {
-    public enum EncounterType
+    public enum ServiceType
     {
         Unknown, 
         [Description("Tax Returns")]

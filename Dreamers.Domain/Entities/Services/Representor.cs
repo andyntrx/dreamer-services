@@ -3,11 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dreamers.Domain.Entities.Tenants
+namespace Dreamers.Domain.Entities.Services
 {
-    public class Tenant : Entity
+    public class Representor : Entity
     {
         public string Name { get; set; }
-        public bool IsActive { get; set; }
     }
 }

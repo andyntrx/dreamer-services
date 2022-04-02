@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Dreamers.Domain.Entities.Tenants
 {
-    public class Group : Entity
+    public class Business : Entity
     {
+        public Guid TenantId { get; set; }
+        public TenantGroup Group { get; set; }
         public string Name { get; set; }
         public bool IsActive { get; set; }
     }

@@ -8,7 +8,8 @@ namespace Dreamers.Domain.Entities.ValueObjects
     public class Address : ValueObject
     {
 
-        public String Street { get; private set; }
+        public string Address1 { get; private set; }
+        public string? Address2 { get; private set; }
         public String City { get; private set; }
         public StatesType State { get; private set; }
         public String Country { get; private set; }
@@ -16,9 +17,10 @@ namespace Dreamers.Domain.Entities.ValueObjects
 
         public Address() { }
 
-        public Address(string street, string city, StatesType state, string zipcode, string country = "US")
+        public Address(string address1, string address2, string city, StatesType state, string zipcode, string country = "US")
         {
-            Street = street;
+            Address1 = address1;
+            Address2 = address2;
             City = city;
             State = state;
             Country = country;
@@ -28,7 +30,8 @@ namespace Dreamers.Domain.Entities.ValueObjects
         protected override IEnumerable<object> GetEqualityComponents()
         {
             // Using a yield return statement to return each element one at a time
-            yield return Street;
+            yield return Address1;
+            yield return Address2 ?? "";
             yield return City;
             yield return State;
             yield return Country;

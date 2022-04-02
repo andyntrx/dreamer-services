@@ -10,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace Dreamers.Application.Features.Tenants
 {
-    public class GetAllCustomers : IRequest<IEnumerable<Company>>
+    public class GetAllCustomers : IRequest<IEnumerable<Business>>
     {
         public Guid TenantId { get; set; }
     }
 
-    public class GetAllCustomerHandler : IRequestHandler<GetAllCustomers, IEnumerable<Company>>
+    public class GetAllCustomerHandler : IRequestHandler<GetAllCustomers, IEnumerable<Business>>
     {
         readonly DreamContext _context;
         public GetAllCustomerHandler(DreamContext context)
@@ -23,7 +23,7 @@ namespace Dreamers.Application.Features.Tenants
             _context = context;
         }
 
-        public async Task<IEnumerable<Company>> Handle(GetAllCustomers request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Business>> Handle(GetAllCustomers request, CancellationToken cancellationToken)
         {
             var customers = _context.Customers.Where(c => c.TenantId == request.TenantId).ToList();
             return customers;

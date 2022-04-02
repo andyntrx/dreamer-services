@@ -1,14 +1,11 @@
-﻿using Dreamers.Common.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
+using Dreamers.Domain.Entities.ValueObjects;
 
 namespace Dreamers.Domain.Entities.Clients
 {
-    public class Client : Entity
+    public class Client : Person
     {
         public ClientType ClientType { get; set; }
-
         public ClientProfile ClientProfile { get; set; }
     }
 }

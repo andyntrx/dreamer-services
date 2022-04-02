@@ -1,13 +1,11 @@
-﻿using Dreamers.Application.Clients;
+﻿
 using Dreamers.Application.Clients.Events;
+using Dreamers.Application.Features.Clients;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Events
+namespace Dreamers.Application.DomainEventHandlers
 {
     internal class ClientProfileCreatedEventHandler : INotificationHandler<ClientProfileCreatedEvent>
     {

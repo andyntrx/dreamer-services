@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Clients
+namespace Dreamers.Application.Features.Clients
 {
     public class GetAllClientPagingationQuery : PaginatedQuery<PaginatedResponse<IEnumerable<ClientProfile>>>
     { 
@@ -24,7 +24,8 @@ namespace Dreamers.Application.Clients
             _context = context;
         }
 
-        public async Task<PaginatedResponse<IEnumerable<ClientProfile>>> Handle(GetAllClientPagingationQuery request, CancellationToken cancellationToken)
+        public async Task<PaginatedResponse<IEnumerable<ClientProfile>>> Handle(GetAllClientPagingationQuery request, 
+                                                                                CancellationToken cancellationToken)
         {
             var query =  _context.ClientProfiles.AsQueryable();
             var results =  query.Skip(request.Page).Take(request.Limit).AsEnumerable();

@@ -7,5 +7,8 @@ namespace Dreamers.Domain.Entities.Clients
 {
     public class ClientProfile : Entity
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }    
+
     }
 }

@@ -21,11 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dreamers.Infra", "Dreamers.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Infrastructures", "04. Infrastructures", "{C0DFD691-37DA-4CE8-8BAD-86C68F951BB1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Background Services", "05. Background Services", "{D3520064-35CB-4124-96BD-C0564344FB78}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. APIs", "02. APIs", "{4DA49BFF-E4B7-4BA9-9BA9-4C61B73DC6AF}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dreamers.Background.Processors", "Dreamers.Background.Processors\Dreamers.Background.Processors.csproj", "{14B11503-1F77-4C1B-A1FE-1B68F7543016}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +53,6 @@ Global
 		{A72B12DE-C3A1-4B48-8FB5-876631499F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72B12DE-C3A1-4B48-8FB5-876631499F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72B12DE-C3A1-4B48-8FB5-876631499F36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14B11503-1F77-4C1B-A1FE-1B68F7543016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14B11503-1F77-4C1B-A1FE-1B68F7543016}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14B11503-1F77-4C1B-A1FE-1B68F7543016}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14B11503-1F77-4C1B-A1FE-1B68F7543016}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,7 +64,6 @@ Global
 		{B72C62DD-5868-46B1-8B98-ECBEC7CE89B6} = {4DA49BFF-E4B7-4BA9-9BA9-4C61B73DC6AF}
 		{40A9F8F7-8910-46B4-8D77-62F5A1FFE424} = {C4441242-5C93-46F2-9FAA-0EFEB02479AA}
 		{A72B12DE-C3A1-4B48-8FB5-876631499F36} = {C0DFD691-37DA-4CE8-8BAD-86C68F951BB1}
-		{14B11503-1F77-4C1B-A1FE-1B68F7543016} = {D3520064-35CB-4124-96BD-C0564344FB78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9C45DB9-485F-43FE-A85F-2C510D33E771}

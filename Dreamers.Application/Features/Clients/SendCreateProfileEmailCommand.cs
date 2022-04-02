@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Clients
+namespace Dreamers.Application.Features.Clients
 {
     internal class SendCreateProfileEmailCommand : IRequest
     {

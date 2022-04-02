@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Clients
+namespace Dreamers.Application.Features.Clients
 {
     public class CreateClientProfileCommand : IRequest
     {
@@ -34,16 +34,17 @@ namespace Dreamers.Application.Clients
             if (request == null)
                 return Unit.Value;
 
-            var cp = new ClientProfile
+            var clientProfile = new ClientProfile
             {
-
+                FirstName = request.FirstName,
+                LastName = request.LastName 
             };
 
-            _context.ClientProfiles.Add(cp);
+            _context.ClientProfiles.Add(clientProfile);
             await _context.SaveChangesAsync();
 
             // publish events to finish client profile
-            await _mediator.Publish(new ClientProfileCreatedEvent(cp.Ucid));
+            await _mediator.Publish(new ClientProfileCreatedEvent(clientProfile.Ucid));
 
             return Unit.Value;
         }

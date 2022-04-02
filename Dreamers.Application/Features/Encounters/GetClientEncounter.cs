@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Dreamers.Application.Encounters
+namespace Dreamers.Application.Features.Encounters
 {
     public class GetClientEncounter : IRequest
     {

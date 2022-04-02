@@ -36,7 +36,7 @@ namespace dreamers.hope.api
             services.AddSwaggerGen();
 
 
-            Application.Register(services);
+            Dreamers.Application.Extensions.Assembly.Startup(services);
 
             services.AddDbContext<DreamContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 

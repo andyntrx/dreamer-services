@@ -1,4 +1,5 @@
 ﻿using Dreamers.Application.Clients;
+using Dreamers.Application.Features.Clients;
 using Dreamers.Aura.Api.Filters;
 using Dreamers.Aura.Api.Helpers;
 using Dreamers.Aura.Api.Wrappers;

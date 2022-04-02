@@ -6,9 +6,9 @@ using System.Text;
 
 namespace Dreamers.Application.Extensions
 {
-    public static class Application
+    public static class Assembly
     {
-        public static void Register(IServiceCollection services)
+        public static void Startup(IServiceCollection services)
         {
             services.AddMediatR(System.Reflection.Assembly.GetExecutingAssembly());
         }

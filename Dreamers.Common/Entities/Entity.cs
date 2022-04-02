@@ -8,7 +8,7 @@ namespace Dreamers.Common.Entities
     {
         public int Id { get; set; }
         public Guid Ucid { get; set; }
-        public DateTime Created { get; set; }
+        public DateTime Created { get; set; } = DateTime.UtcNow;
         public DateTime? Updated { get; set; }
 
         protected Entity()

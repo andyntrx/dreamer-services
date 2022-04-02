@@ -1,4 +1,4 @@
-﻿using Dreamers.Application.Encounters;
+﻿using Dreamers.Application.Features.Encounters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System;

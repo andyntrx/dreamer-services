@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace dreamers.hope.api
+namespace Dreamers.Aura.Api
 {
     public class Program
     {

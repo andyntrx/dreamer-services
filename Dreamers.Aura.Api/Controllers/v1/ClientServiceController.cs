@@ -8,10 +8,10 @@ namespace Dreamers.Aura.Api.Controllers.v1
 {
     [Route("api/v1.0/[controller]")]
     [ApiController]
-    public class ClientEncounterController :  BaseApiController
+    public class ClientServiceController :  BaseApiController
     {
 
-        public ClientEncounterController(IMediator mediator) : base(mediator)
+        public ClientServiceController(IMediator mediator) : base(mediator)
         {
 
         }
@@ -19,7 +19,7 @@ namespace Dreamers.Aura.Api.Controllers.v1
         [HttpGet("{ucid}")]
         public async Task<IActionResult> Get(Guid ucid)
         {
-            var encounter = await Mediator.Send(new GetClientEncounter { ClientUcid = ucid });
+            var encounter = await Mediator.Send(new GetClientService { ClientUcid = ucid });
             return Ok(encounter);
         }
     }

@@ -37,5 +37,16 @@ namespace Dreamers.Aura.Api.Controllers.v1
             return Ok(result);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Post(CreateClientProfile profile)
+        {
+            if (profile == null)
+                return BadRequest("Client profile is invalid");
+
+            var result = Mediator.Send(profile);
+
+            return Ok();
+        }
+
     }
 }

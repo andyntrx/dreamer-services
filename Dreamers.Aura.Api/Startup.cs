@@ -18,7 +18,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace dreamers.hope.api
+namespace Dreamers.Aura.Api
 {
     public class Startup
     {
@@ -35,8 +35,7 @@ namespace dreamers.hope.api
             services.AddControllers();
             services.AddSwaggerGen();
 
-
-            Dreamers.Application.Extensions.Assembly.Startup(services);
+            Application.Extensions.Assembly.Startup(services);
 
             services.AddDbContext<DreamContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 

@@ -9,6 +9,7 @@ namespace Dreamers.Domain.Entities
     public abstract class Person : Entity
     {
         public Name Name { get; set; }
+        public PhoneNumber PhoneNumber { get; private set; }
         public Address Address { get; set; }
     }
 }

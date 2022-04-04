@@ -1,5 +1,6 @@
 ﻿using Dreamers.Domain.Entities;
 using Dreamers.Domain.Entities.Clients;
+using Dreamers.Infra.Data.Context;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,22 +10,25 @@ using System.Threading.Tasks;
 
 namespace Dreamers.Application.Features.Clients
 {
-    public class AddDependants : IRequest
+    public class AddDependants : Dependant, IRequest
     {
-        public IList<Client> Clients { get; set; }    
+
     }
 
     public class AddDependantsHandler : IRequestHandler<AddDependants>
     {
-
-        public AddDependantsHandler()
+        readonly DreamContext _context;
+        public AddDependantsHandler(DreamContext context)
         {
-
+            _context = context;
         }
 
-        public Task<Unit> Handle(AddDependants request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(AddDependants request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            _context.Dependants.Add(request as Dependant);
+            await _context.SaveChangesAsync(cancellationToken);
+
+            return Unit.Value;
         }
     }
 

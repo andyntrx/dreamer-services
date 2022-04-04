@@ -14,6 +14,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dreamers.application\Dreamers.Application.csproj" />
+    <ProjectReference Include="..\dreamers.common\Dreamers.Common.csproj" />
+    <ProjectReference Include="..\dreamers.Domain\Dreamers.Domain.csproj" />
+    <ProjectReference Include="..\dreamers.infra.data\Dreamers.Infra.Data.csproj" />
+    <ProjectReference Include="..\Dreamers.Infra\Dreamers.Infra.Services.csproj" />
   </ItemGroup>
 
 

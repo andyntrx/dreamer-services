@@ -1,5 +1,6 @@
 ﻿
 using Dreamers.Domain.Entities.ValueObjects;
+using System.Collections.Generic;
 
 namespace Dreamers.Domain.Entities.Clients
 {
@@ -7,5 +8,6 @@ namespace Dreamers.Domain.Entities.Clients
     {
         public ClientType ClientType { get; set; }
         public ClientProfile ClientProfile { get; set; }
+        public List<Dependant> Dependants { get; set; }
     }
 }

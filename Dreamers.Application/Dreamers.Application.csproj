@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dreamers.infra.data\Dreamers.Infra.Data.csproj" />
+    <ProjectReference Include="..\Dreamers.Infra\Dreamers.Infra.Services.csproj" />
   </ItemGroup>
 
 </Project>

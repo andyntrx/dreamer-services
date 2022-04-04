@@ -13,8 +13,10 @@ namespace Dreamers.Infra.Data.Context
         {
         }
 
+        public DbSet<ClientService> ClientServices { get; set; }
         public DbSet<ClientProfile> ClientProfiles { get; set; }
         public DbSet<Client> Clients { get; set; }
         public DbSet<Business> Customers { get; set; }
+        public DbSet<Dependant> Dependants { get; set; }    
     }
 }

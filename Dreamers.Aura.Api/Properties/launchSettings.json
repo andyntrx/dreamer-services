@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "dreamers.hope.api": {
+    "Dreamers.Aura.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

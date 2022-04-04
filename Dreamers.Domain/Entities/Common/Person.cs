@@ -10,5 +10,6 @@ namespace Dreamers.Domain.Entities.Shared
     {
         public Name Name { get; set; }
         public Contact Contact { get; set; }    
+        public DateTime BirthDate { get; set; }
     }
 }

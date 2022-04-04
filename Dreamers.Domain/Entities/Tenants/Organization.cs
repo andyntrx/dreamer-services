@@ -8,6 +8,5 @@ namespace Dreamers.Domain.Entities.Tenants
     public class TenantGroup : Entity
     {
         public string Name { get; set; }
-        public bool IsActive { get; set; }
     }
 }

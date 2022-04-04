@@ -10,6 +10,7 @@ namespace Dreamers.Common.Entities
         public Guid Ucid { get; set; }
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public DateTime? Updated { get; set; }
+        public bool IsActive { get; set; }
 
         protected Entity()
         {

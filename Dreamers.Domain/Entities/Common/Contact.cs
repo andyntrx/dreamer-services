@@ -4,12 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Dreamers.Domain.Entities
+namespace Dreamers.Domain.Entities.Shared
 {
-    public abstract class Person : Entity
+    public class Contact : Entity
     {
-        public Name Name { get; set; }
-        public PhoneNumber PhoneNumber { get; private set; }
         public Address Address { get; set; }
+        public string EmailAddress { get; set; }
+        public PhoneNumber PhoneNumber { get; private set; }
     }
 }

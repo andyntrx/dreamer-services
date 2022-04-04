@@ -1,4 +1,5 @@
 ﻿
+using Dreamers.Domain.Entities.Shared;
 using Dreamers.Domain.Entities.ValueObjects;
 using System.Collections.Generic;
 

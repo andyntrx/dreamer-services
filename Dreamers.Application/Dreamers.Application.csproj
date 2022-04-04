@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Documents\" />
     <Folder Include="Features\Healths\" />
     <Folder Include="Validations\" />
   </ItemGroup>

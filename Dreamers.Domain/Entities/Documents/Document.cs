@@ -8,6 +8,7 @@ namespace Dreamers.Domain.Entities.Documents
 {
     public class Document : Entity
     {
+        public Guid RefUcid { get; set; }
         public DocType DocType { get; set; }
 
         public byte[] Blob { get; set; }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Dreamers.Aura.Api.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v1.0/[controller]")]
     [ApiController]
     public class ClientDocumentController : BaseApiController
     {

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dreamers.Domain.Entities.Emails
 {
-    public interface IEmailGenerator
+    public interface IEmailGeneratorService
     {
         MailMessage Generate(object objHolder, EmailTemplate emailTemplate);
     }

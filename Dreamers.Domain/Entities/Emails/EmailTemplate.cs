@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Dreamers.Common.Entities;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Dreamers.Domain.Entities.Emails
 {
-    public enum EmailTemplate
+    public class EmailTemplate : Entity
     {
-        Health,
-        Tax
+        public string HtmlContent { get; set; }
+        public Guid DocRefUcid { get; set; }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Dreamers.Aura.Api.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v1.0/[controller]")]
     [ApiController]
-    public class DocumentManagerController : BaseApiController
+    public class DocumentController : BaseApiController
     {
-        public DocumentManagerController(IMediator mediator) : base(mediator)
+        public DocumentController(IMediator mediator) : base(mediator)
         {
 
         }

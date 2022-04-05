@@ -8,13 +8,14 @@ namespace Dreamers.Domain.Services
 {
     public class EmailTemplateGeneratorService : IEmailGeneratorService
     {
-        public MailMessage Generate(object objHolder, EmailTemplate emailTemplate)
+        public MailMessage Generate(object data, EmailTemplate emailTemplate)
         {
             var email = new MailMessage();
 
+            email.IsBodyHtml = true;
+            email.Body = emailTemplate.GetHtmlContent();
+
             return email;
         }
-
-        
     }
 }

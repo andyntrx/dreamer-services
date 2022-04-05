@@ -10,5 +10,10 @@ namespace Dreamers.Domain.Entities.Emails
     {
         public string HtmlContent { get; set; }
         public Guid DocRefUcid { get; set; }
+
+        public virtual string GetHtmlContent()
+        {
+            return HtmlContent;
+        }
     }
 }

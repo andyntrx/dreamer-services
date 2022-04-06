@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="Features\Healths\" />
+    <Folder Include="Features\Taxes\" />
     <Folder Include="Validations\" />
   </ItemGroup>
 

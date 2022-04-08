@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Dreamers.Domain.Entities.Appointments
 {
-    public   class Appointment
+    public class Appointment
     {
     }
 }

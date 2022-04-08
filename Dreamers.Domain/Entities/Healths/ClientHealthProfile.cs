@@ -4,7 +4,10 @@ using System.Text;
 
 namespace Dreamers.Domain.Entities.Healths
 {
-    public class ClientHealthProfile
+    public class ClientHealthProfile 
     {
+
+
+
     }
 }

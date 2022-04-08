@@ -12,5 +12,6 @@ namespace Dreamers.Domain.Entities.Clients
         public ClientProfile ClientProfile { get; set; }
         public List<Dependant> Dependants { get; set; }
         public List<Document> Documents { get; set; }
+
     }
 }

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.15" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dreamer.Application\Dreamer.Application.csproj" />
+    <ProjectReference Include="..\Dreamer.Common\Dreamer.Common.csproj" />
+    <ProjectReference Include="..\Dreamer.Domain\Dreamer.Domain.csproj" />
+    <ProjectReference Include="..\Dreamer.Infrastructure.Data\Dreamer.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\Dreamer.Infrastructure.Services\Dreamer.Infrastructure.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

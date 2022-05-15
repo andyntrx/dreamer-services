@@ -24,12 +24,8 @@ namespace Dreamer.Application.Features.Clients
 
         public async Task<ClientHealthProfile> Handle(GetClientHealthProfile request, CancellationToken cancellationToken)
         {
-            //var client = await _context.Clients.FindAsync(request.Ucid);
-
-            return new ClientHealthProfile
-            {
-
-            };
+            var client = await _context.Clients.FindAsync(request.Ucid);
+            return new ClientHealthProfile { };
         }
     }
 }

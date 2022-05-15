@@ -40,7 +40,7 @@ namespace Dreamer.Application.Features.Clients
                 LastName = request.LastName 
             };
 
-            //_context.ClientProfiles.Add(clientProfile);
+            _context.ClientProfiles.Add(clientProfile);
             await _context.SaveChangesAsync();
 
             // publish events to finish client profile

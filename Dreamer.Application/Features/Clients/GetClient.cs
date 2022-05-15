@@ -25,10 +25,8 @@ namespace Dreamer.Application.Features.Clients
 
         public async Task<Client> Handle(GetClient request, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-
-            //var cp = await _context.Clients.FindAsync(request.Ucid);
-            //return cp;
+            var cp = await _context.Clients.FindAsync(request.Ucid);
+            return cp;
         }
     }
 }

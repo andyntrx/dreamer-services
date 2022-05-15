@@ -33,15 +33,15 @@ namespace Dreamer.Application.Features.Notifications
 
         public async Task<Unit> Handle(SendDocumentReadyEmailCommand request, CancellationToken cancellationToken)
         {
-            /*
-            var client =  await _context.Clients.FindAsync(request.ClientUcid);
+
+            var client = await _context.Clients.FindAsync(request.ClientUcid);
             if (client != null)
             {
-                var document =  client.Documents.FirstOrDefault(d => d.Ucid == request.DocumentUcid);
+                var document = client.Documents.FirstOrDefault(d => d.Ucid == request.DocumentUcid);
                 var emailTemplate = _context.EmailTemplates.FirstOrDefault(d => d.DocRefUcid == request.DocumentUcid);
                 var email = _emailGeneratorService.Generate(document, emailTemplate);
                 _emailDispatcher.Dispatch(email);
-            }*/
+            }
 
             return Unit.Value;
         }

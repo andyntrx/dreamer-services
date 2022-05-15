@@ -27,9 +27,8 @@ namespace Dreamer.Application.Features.Clients
 
         public async Task<ClientProfile> Handle(GetClientProfile request, CancellationToken cancellationToken)
         {
-            //  var cp = _context.ClientProfiles.FirstOrDefault(c => c.Ucid == request.Ucid);
-            // return cp;
-            return new ClientProfile { };
+            var cp = _context.ClientProfiles.FirstOrDefault(c => c.Ucid == request.Ucid);
+            return cp;
         }
     }
 }

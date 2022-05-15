@@ -25,7 +25,7 @@ namespace Dreamer.Application.Features.Clients
 
         public async Task<Unit> Handle(AddDependants request, CancellationToken cancellationToken)
         {
-          ///  _context.Dependants.Add(request as Dependant);
+            _context.Dependants.Add(request as Dependant);
             await _context.SaveChangesAsync(cancellationToken);
 
             return Unit.Value;

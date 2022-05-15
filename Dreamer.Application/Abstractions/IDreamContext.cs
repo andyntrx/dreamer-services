@@ -2,12 +2,14 @@
 using Dreamer.Domain.Entities.Documents;
 using Dreamer.Domain.Entities.Emails;
 using Dreamer.Domain.Entities.Tenants;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Dreamer.Application.Abstractions
 {
-    public interface IDreamContext 
+    public interface IDreamContext : IDisposable
     {
         public DbSet<ClientService> ClientServices { get; set; }
         public DbSet<ClientProfile> ClientProfiles { get; set; }

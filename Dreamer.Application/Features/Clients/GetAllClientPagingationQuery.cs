@@ -29,10 +29,10 @@ namespace Dreamer.Application.Features.Clients
         {
 
             throw new NotImplementedException();
-            
-            //var query =  _context.ClientProfiles.AsQueryable();
-            //var results =  query.Skip(request.Page).Take(request.Limit).AsEnumerable();
-            //return new PaginatedResponse<IEnumerable<ClientProfile>> { Total = _context.ClientProfiles.Count(), Data = results };
+
+            var query = _context.ClientProfiles.AsQueryable();
+            var results = query.Skip(request.Page).Take(request.Limit).AsEnumerable();
+            return new PaginatedResponse<IEnumerable<ClientProfile>> { Total = _context.ClientProfiles.Count(), Data = results };
         }
     }
 }

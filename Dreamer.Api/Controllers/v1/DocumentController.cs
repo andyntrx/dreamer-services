@@ -18,10 +18,7 @@ namespace Dreamer.Aura.Api.Controllers.v1
         public DocumentController(IMediator mediator) : base(mediator) { }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AddDocument document)
-        {
-            return Ok(await Mediator.Send(document));
-        }
+        public async Task<IActionResult> Post([FromBody] AddDocument document) => Ok(await Mediator.Send(document));
 
 
         [HttpGet("{docType}/{year}/{id}")]

@@ -31,11 +31,7 @@ namespace Dreamer.Aura.Api.Controllers.v1
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(Guid id)
-        {
-            var result = Mediator.Send(new GetClientProfile { Ucid = id });
-            return Ok(result);
-        }
+        public async Task<IActionResult> Get(Guid id) => Ok(await Mediator.Send(new GetClientProfile { Ucid = id }));
 
         [HttpPost]
         public async Task<IActionResult> Post(CreateClientProfile profile)

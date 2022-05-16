@@ -17,10 +17,6 @@ namespace Dreamer.Aura.Api.Controllers.v1
         }
 
         [HttpGet("{ucid}")]
-        public async Task<IActionResult> Get(Guid ucid)
-        {
-            var encounter = await Mediator.Send(new GetClientService { ClientUcid = ucid });
-            return Ok(encounter);
-        }
+        public async Task<IActionResult> Get(Guid ucid) => Ok(await Mediator.Send(new GetClientService { ClientUcid = ucid }));
     }
 }

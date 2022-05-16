@@ -4,9 +4,11 @@ using Dreamer.Application.Features.Healths;
 using Dreamer.Application.Features.Taxes;
 using Dreamer.Domain.Entities.Documents;
 using MediatR;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.IO;
 using System.Threading.Tasks;
 
 namespace Dreamer.Aura.Api.Controllers.v1
@@ -15,10 +17,15 @@ namespace Dreamer.Aura.Api.Controllers.v1
     [ApiController]
     public class DocumentController : BaseApiController
     {
-        public DocumentController(IMediator mediator) : base(mediator) { }
+        readonly IHostingEnvironment _hostingEnvironment;
+        public DocumentController(IMediator mediator, 
+                                  IHostingEnvironment hostingEnvironment) 
+            : base(mediator) {
+            _hostingEnvironment = hostingEnvironment;
+        }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AddDocument document) => Ok(await Mediator.Send(document));
+        public async Task<IActionResult> Post([FromBody] AddDocument document) => await ProcessUploadDocument(document);
 
 
         [HttpGet("{docType}/{year}/{id}")]
@@ -33,6 +40,26 @@ namespace Dreamer.Aura.Api.Controllers.v1
                 DocType.Tax => new GetClientTaxDocument { ClientId = id, Start = year },
                 _ => throw new InvalidOperationException()
             };
+        }
+
+        private async Task<IActionResult> ProcessUploadDocument(AddDocument document)
+        {
+            var uniqueFileName = GetUniqueFileName(document.File.FileName);
+            var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");
+            var filePath = Path.Combine(uploads, uniqueFileName);
+
+            document.File.CopyTo(new FileStream(filePath, FileMode.Create));
+
+            return  Ok(await Mediator.Send(document));
+        }
+
+        private string GetUniqueFileName(string fileName)
+        {
+            fileName = Path.GetFileName(fileName);
+            return Path.GetFileNameWithoutExtension(fileName)
+                      + "_"
+                      + Guid.NewGuid().ToString().Substring(0, 4)
+                      + Path.GetExtension(fileName);
         }
     }
 }

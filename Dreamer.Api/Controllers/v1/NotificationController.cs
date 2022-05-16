@@ -5,7 +5,7 @@ namespace Dreamer.Api.Controllers.v1
 {
     [Route("api/v1.0/[controller]")]
     [ApiController]
-    public class HealthClientController : ControllerBase
+    public class NotificationController : ControllerBase
     {
     }
 }

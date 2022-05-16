@@ -1,4 +1,5 @@
-﻿    
+﻿
+using Dreamer.Application.Abstractions;
 using Dreamer.Domain.Entities.Clients;
 using Dreamer.Domain.Entities.Documents;
 using Dreamer.Domain.Entities.Emails;
@@ -7,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Dreamer.Infrastructure.Data.Context
 {
-    public class IDreamContext : DbContext
+    public class DreamContext : DbContext, IDreamContext
     {
-        public IDreamContext(DbContextOptions<IDreamContext> options)
+        public DreamContext(DbContextOptions<DreamContext> options)
             : base(options)
         {
         }

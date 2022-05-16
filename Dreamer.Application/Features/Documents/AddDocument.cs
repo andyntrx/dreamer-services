@@ -1,4 +1,5 @@
 ﻿using Dreamer.Application.Abstractions;
+using Dreamer.Application.Documents;
 using Dreamer.Domain.Entities.Documents;
 using MediatR;
 using System;
@@ -11,27 +12,30 @@ namespace Dreamer.Application.Features.Documents
 {
     public class AddDocument : IRequest
     {
-    }
+        public DocType DocType { get; set; }
+        public string Name { get; set; }
 
-    public class AddDocumentHandler : IRequestHandler<AddDocument>
-    {
-        readonly IDreamContext _context;
-        public AddDocumentHandler(IDreamContext context)
+        public class Handler : IRequestHandler<AddDocument>
         {
-            _context = context;
-        }
-
-        public async Task<Unit> Handle(AddDocument request, CancellationToken cancellationToken)
-        {
-            /*
-            _context.Documents.Add(new Document
+            readonly IDreamContext _context;
+            public Handler(IDreamContext context)
             {
+                _context = context;
+            }
 
-            });*/
+            public async Task<Unit> Handle(AddDocument request, CancellationToken cancellationToken)
+            {
+                _context.Documents.Add(new Document
+                {
+                    Created = DateTime.Now,
+                    Name = request.Name,
 
-            await _context.SaveChangesAsync();
+                });
 
-            return Unit.Value;
+                await _context.SaveChangesAsync();
+
+                return Unit.Value;
+            }
         }
     }
 }

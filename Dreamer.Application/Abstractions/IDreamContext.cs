@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Dreamer.Application.Abstractions
 {
-    public interface IDreamContext : IDisposable
+    public interface IDreamContext 
     {
         public DbSet<ClientService> ClientServices { get; set; }
         public DbSet<ClientProfile> ClientProfiles { get; set; }

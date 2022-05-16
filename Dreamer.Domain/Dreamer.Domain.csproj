@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Notifications\" />
+    <Compile Remove="Entities\Notifications\**" />
+    <EmbeddedResource Remove="Entities\Notifications\**" />
+    <None Remove="Entities\Notifications\**" />
   </ItemGroup>
 
   <ItemGroup>

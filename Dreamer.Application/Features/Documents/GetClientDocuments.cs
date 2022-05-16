@@ -25,8 +25,7 @@ namespace Dreamer.Application.Features.Documents
 
         public async Task<IEnumerable<Document>> Handle(GetClientDocuments request, CancellationToken cancellationToken)
         {
-            //return _context.Documents.Where(d => d.RefUcid == request.ClientUcid).ToList();
-            return new List<Document> { new Document { } };
+            return _context.Documents.Where(d => d.RefUcid == request.ClientUcid).ToList();
         }
     }
 }

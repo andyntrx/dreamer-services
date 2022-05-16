@@ -1,4 +1,5 @@
 
+using Dreamer.Application.Abstractions;
 using Dreamer.Application.Clients;
 using Dreamer.Application.Extensions;
 using Dreamer.Infrastructure.Data.Context;
@@ -36,10 +37,11 @@ namespace Dreamer.Aura.Api
             services.AddSwaggerGen();
 
             Application.Extensions.Assembly.Startup(services);
-
-            services.AddDbContext<IDreamContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            Infrastructure.Services.Extensions.Assembly.Startup(services);
+            Infrastructure.Data.Extensions.Assembly.Startup(services, Configuration);
 
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

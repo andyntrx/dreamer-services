@@ -18,8 +18,8 @@ namespace Dreamer.Aura.Api.Controllers.v1
     public class DocumentController : BaseApiController
     {
         readonly IHostingEnvironment _hostingEnvironment;
-        public DocumentController(IMediator mediator, 
-                                  IHostingEnvironment hostingEnvironment) 
+        public DocumentController(IMediator mediator,
+                                  IHostingEnvironment hostingEnvironment)
             : base(mediator) {
             _hostingEnvironment = hostingEnvironment;
         }
@@ -31,6 +31,21 @@ namespace Dreamer.Aura.Api.Controllers.v1
         [HttpGet("{docType}/{year}/{id}")]
         public async Task<IActionResult> GetDocument(DocType docType, Guid id, int year) => Ok(await Mediator.Send(GetDocByType(docType, id, year)));
 
+
+        [HttpGet("id")]
+        public async Task<IActionResult> GetFile([FromQuery] Guid id)
+        {
+
+            var document = await Mediator.Send(new GetDocumentFile { DocumentId = id });
+            if (document != null)
+            {
+                var content = new System.IO.MemoryStream(document.Blob);
+                var contentType = "application/octet-stream";
+                return File(content, contentType, document.FileName);
+            }
+
+            return NotFound();
+        }
 
         private object GetDocByType(DocType docType, Guid id, int year)
         {

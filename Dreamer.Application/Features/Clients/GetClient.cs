@@ -9,24 +9,24 @@ using System.Threading.Tasks;
 
 namespace Dreamer.Application.Features.Clients
 {
-    public class GetClient : IRequest<Client>
+    public class GetClientQuery : IRequest<Client>
     {
         public Guid Ucid { get; set; }
-    }
 
-    public class GetClientHandler : IRequestHandler<GetClient, Client>
-    {
-        readonly IDreamContext _context;
-
-        public GetClientHandler(IDreamContext context)
+        public class Handler : IRequestHandler<GetClientQuery, Client>
         {
-            _context = context;
-        }
+            readonly IDreamContext _context;
 
-        public async Task<Client> Handle(GetClient request, CancellationToken cancellationToken)
-        {
-            var cp = await _context.Clients.FindAsync(request.Ucid);
-            return cp;
+            public Handler(IDreamContext context)
+            {
+                _context = context;
+            }
+
+            public async Task<Client> Handle(GetClientQuery request, CancellationToken cancellationToken)
+            {
+                var cp = await _context.Clients.FindAsync(request.Ucid);
+                return cp;
+            }
         }
     }
 }

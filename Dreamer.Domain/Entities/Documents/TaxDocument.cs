@@ -15,7 +15,6 @@ namespace Dreamer.Domain.Entities.Documents
                 Year = doc.Year,
                 Id = doc.Id,
                 DocType = Application.Documents.DocType.Tax
-
             };
         }
     }

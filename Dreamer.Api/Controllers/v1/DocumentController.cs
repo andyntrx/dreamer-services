@@ -25,7 +25,7 @@ namespace Dreamer.Aura.Api.Controllers.v1
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] AddDocument document) => await ProcessUploadDocument(document);
+        public async Task<IActionResult> Post([FromBody] AddDocumentCommand document) => await ProcessUploadDocument(document);
 
 
         [HttpGet("{docType}/{year}/{id}")]
@@ -57,7 +57,7 @@ namespace Dreamer.Aura.Api.Controllers.v1
             };
         }
 
-        private async Task<IActionResult> ProcessUploadDocument(AddDocument document)
+        private async Task<IActionResult> ProcessUploadDocument(AddDocumentCommand document)
         {
             var uniqueFileName = GetUniqueFileName(document.File.FileName);
             var uploads = Path.Combine(_hostingEnvironment.WebRootPath, "uploads");

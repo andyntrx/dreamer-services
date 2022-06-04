@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32413.511
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32519.111
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Core", "01. Core", "{C4441242-5C93-46F2-9FAA-0EFEB02479AA}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dreamer.Infrastructure.Data", "Dreamer.Infrastructure.Data\Dreamer.Infrastructure.Data.csproj", "{313EED98-262F-49CA-A2BE-E64544729647}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dreamer.Infrastructure.Services", "Dreamer.Infrastructure.Services\Dreamer.Infrastructure.Services.csproj", "{B7F6F34E-4AD7-440D-8613-739DDB09BD7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deamer.Infrastructure.Identity", "Deamer.Infrastructure.Identity\Deamer.Infrastructure.Identity.csproj", "{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B7F6F34E-4AD7-440D-8613-739DDB09BD7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7F6F34E-4AD7-440D-8613-739DDB09BD7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7F6F34E-4AD7-440D-8613-739DDB09BD7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{1D4F0DF0-BF84-48A7-AE1D-16000C135280} = {4DA49BFF-E4B7-4BA9-9BA9-4C61B73DC6AF}
 		{313EED98-262F-49CA-A2BE-E64544729647} = {C0DFD691-37DA-4CE8-8BAD-86C68F951BB1}
 		{B7F6F34E-4AD7-440D-8613-739DDB09BD7B} = {C0DFD691-37DA-4CE8-8BAD-86C68F951BB1}
+		{7E0C7085-1F3F-4D61-918D-F8D70A2DD7E5} = {C0DFD691-37DA-4CE8-8BAD-86C68F951BB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B9C45DB9-485F-43FE-A85F-2C510D33E771}

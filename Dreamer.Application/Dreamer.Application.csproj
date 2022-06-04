@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Dreamer.Domain\Dreamer.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Identies\" />
+  </ItemGroup>
+
 </Project>

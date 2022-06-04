@@ -11,7 +11,6 @@ namespace Dreamer.Domain.Entities.Documents
         public string Name { get; set; }
         public Guid RefUcid { get; set; }
         public DocType DocType { get; set; }
-
         public int Year { get; set; }
         public string FileName { get; set; }
         public byte[] Blob { get; set; }
